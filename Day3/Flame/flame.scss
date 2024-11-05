@@ -1,0 +1,81 @@
+//Variablen:
+$gold: gold;
+$orange: orange;
+$red: orangered;
+$white: white;
+$blue: slateblue;
+$black: black;
+
+@mixin flame($left, $width, $height, $background, $box-shadow-color){
+    left: $left;
+    width: $width;
+    height: $height;
+    background: $background;
+    box-shadow: 0px 0px 9px 4px $box-shadow-color;
+    position: absolute;
+    bottom: 0;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    transform: rotate(-45deg) scale(1.5, 1.5);
+
+}
+
+@mixin circle($width, $height, $left, $bottom, $background, $box-shadow-color){
+    left: $left;
+    width: $width;
+    height: $height;
+    bottom: $bottom;
+    background: $background;
+    box-shadow: 0px 0px 15px 10px $box-shadow-color;
+    position: absolute;
+    border-radius: 50%;
+}
+
+@keyframes flicker {
+    0%{transform: rotate(-1deg);
+    }
+    20%{transform: rotate(1deg);
+    }
+    40%{transform: rotate(-1deg);
+    }
+    60%{transform: rotate(-1deg) scale(1.04);
+    }
+    80%{transform: rotate(-2deg) scale(0.92);
+    }
+    100%{transform: rotate(1deg);
+    }
+}
+
+body{
+    background-color: $black;
+    display: grid;
+    place-items: center;
+    height: 95vh;
+}
+
+.container{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    transform-origin: center bottom;
+    animation: flicker 3ms 200ms ease-in infinite alternate;
+}
+
+.red{
+    @include flame(5px, 50px, 50px, $red, $red)
+}
+.orange{
+    @include flame(10px, 40px, 40px, $orange, $orange)
+}
+.yellow{
+    @include flame(15px, 30px, 30px, $gold, $gold)
+}
+.white{
+    @include flame(15px, 30px, 30px, $white, $white)
+}
+.blue{
+    @include circle(10px, 10px, 25px, -25px, $blue, $blue)
+}
+.black{
+    @include circle(40px, 40px, 10px,-60px, $black, $black)
+}

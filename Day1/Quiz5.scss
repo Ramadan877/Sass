@@ -1,0 +1,17 @@
+@mixin rounded-shadow($radius, $shadow-color){
+    border-radius: $radius;
+    box-shadow: 0 0 10px $shadow-color;
+}
+
+
+.box{
+    @include rounded-shadow(10px, rgba(0,  0, 0, 0.2));
+    width: 300px;
+    height: 200px;
+    background-color: lightblue;
+}
+
+.large-box{
+    @extend .box;
+    width: 500px;
+}

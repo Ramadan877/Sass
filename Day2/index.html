@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/Übung/scss/main.css"> <!-- Link zur kompilierte CSS-Datei -->
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <ul>
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#portfolio">Portfolio</a></li> 
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle">Wechsel zu Dark Mode</button>
+
+    </header>
+
+    <main>
+        <section id="about" class="about-section">
+            <h1>Über mich</h1>
+            <p>Hier ist ein kurzer Abschnitt über mich und meine Fähigkeiten.</p>
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+          <div class="portfolio-filters">
+            <button data-filter="all">Alle</button>
+            <button data-filter="web">Web</button>
+            <button data-filter="graphic">Grafikdesign</button>
+          </div>
+          
+            <div class="grid-container">
+                <div class="portfolio-item" data-category="web">
+                    <img src="Übung/assets/photo1.png" alt="Projekt 1">
+                    <h3>Web Projekt 1</h3>
+                </div>
+                <div class="portfolio-item" data-category="graphic">
+                  <img src="Übung/assets/photo2.png" alt="Projekt 1">
+                  <h3>Web Projekt 1</h3>
+              </div>
+              <div class="portfolio-item" data-category="graphic">
+                <img src="Übung/assets/photo3.png" alt="Projekt 1">
+                <h3>Web Projekt 1</h3>
+            </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Kontakt</h2>
+            <p>Email: example@mail.com</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2024 Abdelrahman</p>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  const filters = document.querySelectorAll('[data-filter]');
+  const items = document.querySelectorAll('.portfolio-item');
+
+  filters.forEach(filter => {
+    filter.addEventListener('click', function() {
+      const category = this.getAttribute('data-filter');
+
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+
+
+
+// Dark/Light Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', function() {
+  if (body.getAttribute('data-theme') === 'dark') {
+    body.setAttribute('data-theme', 'light');
+    this.textContent = 'Wechsel zu Dark Mode';
+  } else {
+    body.setAttribute('data-theme', 'dark');
+    this.textContent = 'Wechsel zu Light Mode';
+  }
+});
+
+    </script> 
+</body>
+</html>

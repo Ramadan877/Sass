@@ -1,0 +1,24 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .grid-container {
+    @include grid-layout(3); 
+  }
+  
+  @media screen and (max-width: 768px) {
+    .grid-container {
+      @include grid-layout(2); 
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .grid-container {
+      @include grid-layout(1); 
+    }
+  }
+  
+
+  bac

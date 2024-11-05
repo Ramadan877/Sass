@@ -1,0 +1,19 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.item {
+  width: 780px;
+  float: left;
+  margin-right: 20px;
+  background-color: #add8e6;
+}
+
+.item2 {
+  width: 380px;
+  float: left;
+  margin-right: 20px;
+  background-color: lightcoral;
+}/*# sourceMappingURL=Quiz4.css.map */

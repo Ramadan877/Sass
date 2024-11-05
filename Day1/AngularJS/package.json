@@ -1,0 +1,21 @@
+{
+  "name": "angularjs",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server .",
+    "build": "gulp sass",
+    "watch": "gulp watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "angular": "^1.8.3",
+    "angular-css": "^1.0.8",
+    "angular-route": "^1.8.3",
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0"
+  }
+}

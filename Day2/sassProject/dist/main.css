@@ -1,0 +1,70 @@
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgba(255, 165, 0, 0.9), rgba(0, 0, 0, 0.3)), url("Day2/SassProject/photo.jpg") center top;
+  background-size: cover;
+}
+.home__name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid white;
+}
+.home__name--last {
+  color: orange;
+  font-weight: 700;
+}
+
+.about {
+  padding-bottom: 2rem;
+}
+.about__bio-image {
+  height: 50vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url("photo.jpg") center top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.about__bio-image p {
+  margin-bottom: 2rem;
+}
+.about__bio {
+  width: 80%;
+  text-align: center;
+}
+.about__bio .text-secondary {
+  padding-bottom: 1rem;
+}
+.aboutjobs {
+  width: 60vh;
+  margin: 2rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+.aboutjobs__job {
+  background: #1a1a1a;
+  padding: 0.5rem;
+  border-bottom: 5px solid orange;
+}
+.aboutjobs__job h2, .aboutjobs__job h3 {
+  margin: 0.5rem 0;
+}
+.aboutjobs__job h6 {
+  margin: 0.3rem 0;
+}
+.about .social-icons {
+  display: flex;
+  flex-direction: column;
+}
+.about footer {
+  transform: rotate(90deg) translate(-3rem, -5rem);
+}
+
+/*# sourceMappingURL=main.css.map */

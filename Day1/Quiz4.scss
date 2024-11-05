@@ -1,0 +1,23 @@
+$container-width: 1200px;
+$gutter:20px;
+$columns: 12;
+
+@mixin grid-column($col-span){
+    width:calc((($container-width) /($columns)) * $col-span - ($gutter));
+    float: left;
+    margin-right: $gutter;
+}
+
+.container{
+    width: $container-width;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.item{
+    @include grid-column(8);
+    background-color: #add8e6;
+}
+.item2{
+    @include grid-column(4);
+    background-color: lightcoral;
+}

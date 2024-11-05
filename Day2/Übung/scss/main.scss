@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'layout';
+@import 'components';
+@import 'portfolio';
+
+
+/* Light Mode - Standard Styles im :root */
+:root {
+    --bg-color: #{$light-bg-color};
+    --text-color: #{$light-text-color};
+    --primary-color: #{$light-primary-color};
+  }
+  
+  /* Dark Mode - Wenn der Body das data-theme="dark" Attribut hat */
+  body[data-theme='dark'] {
+    --bg-color: #{$dark-bg-color};
+    --text-color: #{$dark-text-color};
+    --primary-color: #{$dark-primary-color};
+  }
+  
+  /* Anwenden der Variablen in den Styles */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .site-header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  a {
+    color: var(--primary-color);
+  }
+  
+  .site-footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  

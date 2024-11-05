@@ -1,0 +1,122 @@
+@charset "UTF-8";
+h1, h2, h3 {
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color: #3498db;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+.site-header {
+  background-color: #3498db;
+  padding: 20px;
+  text-align: center;
+}
+.site-header .nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.site-footer {
+  background-color: #2ecc71;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.portfolio-section {
+  padding: 20px; /* Füge hier ein Padding hinzu, um Abstand zur Seite zu schaffen */
+}
+
+.grid-container {
+  padding: 20px; /* Falls der Abstand innerhalb des Containers hinzugefügt werden soll */
+}
+
+.portfolio-item {
+  border: 1px solid #3498db;
+  transition: transform 0.3s ease-in-out;
+}
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+.portfolio-item img {
+  width: 100%;
+}
+
+/* Light Mode - Standard Styles im :root */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #3498db;
+}
+
+/* Dark Mode - Wenn der Body das data-theme="dark" Attribut hat */
+body[data-theme=dark] {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --primary-color: #1abc9c;
+}
+
+/* Anwenden der Variablen in den Styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.site-header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+.site-footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}/*# sourceMappingURL=main.css.map */

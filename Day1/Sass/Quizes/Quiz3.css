@@ -1,0 +1,12 @@
+nav {
+  background-color: #333;
+}
+nav ul {
+  margin-left: 0;
+}
+nav ul li {
+  display: inline-block;
+}
+nav a {
+  color: #fff;
+}/*# sourceMappingURL=Quiz3.css.map */

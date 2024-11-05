@@ -1,0 +1,43 @@
+.card{
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-title{
+    font-size: 1.5rem;
+    color: #333;
+}
+.card-body{
+    font-size: 1rem;
+    color: #666;
+}
+
+.paragraph{
+    color: black;
+    background-color: blue;
+    padding: 10px;
+    /* font-size: 2rem; */
+}
+/* external stylesheets */
+
+/* mobilgeräte */
+@media (max-width: 600px){
+    .container{
+        width: 100%;
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px){
+    .container{
+        width: 80%;
+    }
+}
+
+/* Desktops */
+@media (min-width: 1025px){
+    .container{
+        width: 60%;
+    }
+}

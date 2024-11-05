@@ -1,0 +1,13 @@
+.message{
+    @extend %message-shared;
+}
+
+.success{
+    @extend %message-shared;
+    border-color: green;
+}
+.warning{
+    @extend %equal-heights;
+    border-color: yellow;
+}
+

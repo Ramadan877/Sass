@@ -1,0 +1,9 @@
+body{
+    counter-reset: chapter;
+}
+
+h1::before{
+    content: counter(chapter) ". ";
+    counter-increment: chapter;
+}
+

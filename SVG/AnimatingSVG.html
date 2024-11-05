@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Circle Wave</title>
+    <style>
+        :root {
+            --color-1: #6e40aa;
+            --color-2: #4c6edb;
+            --color-3: #24aad8;
+            --color-4: #1ac7c2;
+            --color-5: #1ddea3;
+        }
+
+        .shape {
+            animation: moveCircle 1250ms ease-in-out infinite both;
+        }
+
+        /* Proper nth-child targeting for each circle */
+        .shape:nth-child(1) {
+            fill: var(--color-1);
+        }
+
+        .shape:nth-child(2) {
+            fill: var(--color-2);
+        }
+
+        .shape:nth-child(3) {
+            fill: var(--color-3);
+        }
+
+        .shape:nth-child(4) {
+            fill: var(--color-4);
+        }
+
+        .shape:nth-child(5) {
+            fill: var(--color-5);
+        }
+
+        /* Keyframes for animating the circle movement */
+        @keyframes moveCircle {
+            0%, 100% {
+                cy: 50;
+                r: 20;
+            }
+            50% {
+                cy: 150;
+                r: 13;
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg width="350" height="250">
+        <circle cx="60" cy="50" r="20" class="shape" />
+        <circle cx="120" cy="50" r="20" class="shape" />
+        <circle cx="180" cy="50" r="20" class="shape" />
+        <circle cx="240" cy="50" r="20" class="shape" />
+        <circle cx="300" cy="50" r="20" class="shape" />
+    </svg>
+</body>
+</html>

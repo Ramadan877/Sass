@@ -1,0 +1,34 @@
+$Font-Size: 1rem;
+$Align-Items:center;
+
+body{
+    font-size: $Font-Size;
+    align-items: $Align-Items;
+}
+h1{
+    font-size: $Font-Size;
+    align-items: $Align-Items;
+
+}
+div{
+    font-size: $Font-Size;
+    align-items: $Align-Items;
+
+}
+p{
+    font-size: $Font-Size;
+    align-items: $Align-Items;
+
+}
+
+%message-shared{//das hier wird ausgedrückt, weil message-shared ist erweitert
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+}
+
+
+%equal-heights{// das hier wird nicht ausgedrückt, weil equal-heights function nicht erweitert ist.
+    display: flex;
+    flex-wrap: wrap;
+}

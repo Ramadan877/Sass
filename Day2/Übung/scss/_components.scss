@@ -1,0 +1,19 @@
+.site-header {
+    background-color: $color-primary;
+    padding: 20px;
+    text-align: center;
+  
+    .nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  
+  .site-footer {
+    background-color: $color-secondary;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  

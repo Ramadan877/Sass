@@ -1,0 +1,22 @@
+.portfolio-section {
+  padding: 20px; /* Füge hier ein Padding hinzu, um Abstand zur Seite zu schaffen */
+}
+
+.grid-container {
+  padding: 20px; /* Falls der Abstand innerhalb des Containers hinzugefügt werden soll */
+}
+
+
+.portfolio-item {
+    border: 1px solid $color-primary;
+    transition: transform 0.3s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    img {
+      width: 100%;
+    }
+  }
+  

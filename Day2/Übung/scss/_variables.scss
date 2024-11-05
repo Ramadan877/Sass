@@ -1,0 +1,32 @@
+$font-base: 16px;
+$font-lg: 2rem;
+$font-md: 1.5rem;
+$font-sm: 1rem;
+
+$color-primary: #3498db;
+$color-secondary: #2ecc71;
+$color-bg-light: #f9f9f9;
+$color-bg-dark: #2c3e50;
+$color-text-dark: #333;
+
+$light-bg-color: #ffffff;
+$light-text-color: #000000;
+$light-primary-color: #3498db; 
+
+$dark-bg-color: #000000;
+$dark-text-color: #ffffff;
+$dark-primary-color: #1abc9c;
+
+h1, h2, h3 {
+    color: var(--text-color);
+  }
+  
+  button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  

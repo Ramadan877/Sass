@@ -1,0 +1,11 @@
+$container-width: 1200px;
+$gutter: 20px;
+$columns: 12;
+
+@mixin grid-column($col-span) {
+  width: calc((#{$container-width} / #{$columns}) * $col-span - #{$gutter});
+}
+
+.item {
+  @include grid-column(4); 
+}
